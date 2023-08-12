@@ -19,6 +19,8 @@ class XylophoneApp extends StatelessWidget {
     ];
 
     void _onPressed(int key) async {
+      await player.stop();
+
       await player.play(
         AssetSource('note$key.wav'),
       );
